@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartoon character</title>
+    <link rel="stylesheet" href="cartoon.css">
+</head>
+<body id="body">
+    <div class="cartoon">
+        <div class="chin"></div>
+        <div class="hair"></div>
+        <div class="head">
+            <div class="forehead"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="eye"></div>
+            <div class="hair"></div>
+            <div class="hairtop"></div>
+            <div class="ear"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+    <script>
+
+        document.querySelector('.cartoon').addEventListener("mousemove", eyeball);
+                function eyeball(){
+                    let eye = document.querySelectorAll('.eye');
+                    eye.forEach(function(eye){
+                        let x = (eye.getBoundingClientRect().left) + (eye.
+                        clientWidth / 2);
+                        let y = (eye.getBoundingClientRect().top) + (eye.
+                        clientHeight / 2);
+                        let radian = Math.atan2(event.pageX - x, event.pageY - y);
+                        let rot = (radian * (180 / Math.PI) * -1) - 270;
+                        eye.style.transform = "rotate("+ rot +"deg)"
+                    })
+                }
+    </script>
+</body>
+</html>
