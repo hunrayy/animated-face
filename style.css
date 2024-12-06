@@ -5,7 +5,7 @@
     aspect-ratio: 1;
     height: 90vmin;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     --gradient: #0003 0 0.125%, #0000 0 9.875%, #0003 0 10%;
@@ -179,4 +179,26 @@
     border: 0.75vmin solid;
     border-bottom-width: 1.5vmin;
     border-right-width: 1vmin;
+}
+
+
+
+.designed{
+    text-align: center;
+    margin-top: 30px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 468px) {
+    .cartoon{
+        top: 50%;
+    }
 }
